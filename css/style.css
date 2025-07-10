@@ -8,12 +8,22 @@ body {
 
 /* --- Hero Section --- */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/hero-bg.jpg'); /* Optional: add a background image */
-    background-size: cover;
-    background-position: center;
+    position: relative; /* Ini penting untuk menumpuk partikel di belakang */
     height: 100vh;
     color: white;
+    overflow: hidden; /* Mencegah scroll bar jika partikel keluar batas */
 }
+
+#home .particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #212529; /* Warna latar belakang abu-abu gelap */
+}
+
 .profile-img {
     width: 150px;
     height: 150px;

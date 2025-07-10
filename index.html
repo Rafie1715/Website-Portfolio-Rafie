@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">Rafie Rojagat Bachri</a>
+            <a class="navbar-brand" href="#home">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,45 +45,51 @@
         </div>
     </nav>
 
-    <section id="home" class="hero-section d-flex align-items-center text-center">
-        <div class="container">
+    <section id="home" class="hero-section position-relative">
+        <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+            style="height: 100%; z-index: 2;">
             <img src="assets/images/profile.jpg" class="profile-img rounded-circle mb-3" alt="Rafie Rojagat Bachri" />
             <h1 class="display-4">Rafie Rojagat Bachri</h1>
             <p class="lead">
                 Undergraduate Informatics Student at UPN Veteran Jakarta
             </p>
             <p class="lead-subtitle">Passionate about Mobile and Web Development</p>
-            <a href="#projects" class="btn btn-primary btn-lg mt-3">View My Work</a>
-            <a href="#contact" class="btn btn-outline-light btn-lg mt-3">Get In Touch</a>
+            <div>
+                <a href="#projects" class="btn btn-primary btn-lg mt-3">View My Work</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg mt-3 ms-2">Get In Touch</a>
+            </div>
         </div>
     </section>
 
     <section id="about" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <p>
-                        I am an undergraduate student majoring in Informatics at UPN
-                        Veteran Jakarta and a Bangkit Academy graduate, with a strong
-                        interest in Software Engineering. I'm passionate about end-to-end
-                        application development, especially in Mobile Development and Web
-                        Development. I am always eager to grow through continuous learning
-                        and collaboration to build innovative, impactful tech solutions.
+            <div class="row align-items-center gy-5">
+
+                <div class="col-lg-7">
+                    <p class="lead" style="font-size: 1.1rem;">
+                        I am an undergraduate student majoring in Informatics at Universitas Pembangunan Nasional “Veteran” Jakarta (UPN “Veteran” Jakarta), with a deep and proven passion for Software Engineering. I have developed a strong proficiency in both mobile and web development, specializing in building full-stack applications.<br><br>
+                        My technical expertise includes various programming languages such as Kotlin, Java, Python, and JavaScript complemented by hands-on experience with modern frameworks and tools like Node.js and Firebase. My projects demonstrate my ability to tackle real-world challenges, from developing the "Planetku" smart waste management app for my Bangkit capstone project to creating the "Computer Crafter" website, a PC building simulator designed to educate users on component selection. I am certified in multiple areas, including Android Development and Web Development, and I'm eager to apply my skills to create innovative and impactful technology solutions.
                     </p>
-                    <h4 class="mt-4">Education</h4>
-                    <ul>
-                        <li>
-                            <strong>Universitas Pembangunan Nasional Veteran Jakarta</strong>
-                            - Informatics / Computer Science (2022 - Present)
+
+                    <a href="assets/CV Rafie Rojagat Bachri.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download me-2"></i>Download CV
+                    </a>
+                </div>
+
+                <div class="col-lg-5 text-center">
+                    <img src="assets/images/upnvj_logo.png" alt="UPN Logo" class="img-fluid mb-4" width="220">
+                    <h4 class="fw-bold">Education</h4>
+                    <ul class="list-unstyled text-center">
+                        <li class="mt-2">
+                            <strong>Universitas Pembangunan Nasional "Veteran" Jakarta</strong><br>
+                            <small class="text-muted">Informatics (2022 - Present)</small>
                         </li>
-                        <li>
-                            <strong>SMA Negeri 13 Jakarta</strong> - Science (2019-2022)
+                        <li class="mt-3">
+                            <strong>SMA Negeri 13 Jakarta</strong><br>
+                            <small class="text-muted">Science (2019 - 2022)</small>
                         </li>
                     </ul>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <img src="assets/images/upnvj_logo.png" alt="UPN Logo" class="img-fluid" width="200" />
                 </div>
             </div>
         </div>
@@ -796,6 +802,8 @@
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/particle-config.js"></script>
 </body>
 
 </html>
