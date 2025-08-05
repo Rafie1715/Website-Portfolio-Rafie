@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Navbar transparency effect on scroll
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -10,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Smooth scrolling for nav links
     document.querySelectorAll('a.nav-link').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Fade-in animation for sections on scroll
     const sections = document.querySelectorAll('section');
     const options = {
         root: null,
@@ -56,30 +53,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (filterContainer) {
         filterContainer.addEventListener('click', (e) => {
-            // Pastikan yang diklik adalah tombol
             if (e.target.tagName === 'BUTTON') {
                 
-                // Simpan tombol yang sedang aktif SEBELUM diubah
                 const currentActiveBtn = filterContainer.querySelector('.active');
                 if (currentActiveBtn) {
                     currentActiveBtn.classList.remove('active', 'btn-warning');
                     currentActiveBtn.classList.add('btn-outline-secondary');
                 }
                 
-                // Tambahkan kelas aktif ke tombol yang BARU diklik
                 e.target.classList.add('active', 'btn-warning');
                 e.target.classList.remove('btn-outline-secondary');
                 
                 const filterValue = e.target.getAttribute('data-filter');
 
                 projectItems.forEach(item => {
-                    // Logika untuk menyembunyikan atau menampilkan item
                     if (filterValue === '*' || item.classList.contains(filterValue.substring(1))) {
-                        // Hapus kelas 'hide' untuk menampilkan
                         item.classList.remove('hide');
                         item.classList.add('show');
                     } else {
-                        // Tambah kelas 'hide' untuk menyembunyikan
                         item.classList.remove('show');
                         item.classList.add('hide');
                     }
@@ -94,4 +85,32 @@ const lightbox = GLightbox({
     loop: true,
     width: '90vw',
     height: '80vh'
+});
+
+const cursorDot = document.querySelector('[data-cursor-dot]');
+const cursorOutline = document.querySelector('[data-cursor-outline]');
+const hoverables = document.querySelectorAll('a, button'); // Semua elemen yang bisa di-hover
+
+window.addEventListener('mousemove', function(e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+    cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, { duration: 500, fill: "forwards" });
+});
+
+hoverables.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        cursorDot.classList.add('hover');
+        cursorOutline.classList.add('hover');
+    });
+    link.addEventListener('mouseleave', () => {
+        cursorDot.classList.remove('hover');
+        cursorOutline.classList.remove('hover');
+    });
 });

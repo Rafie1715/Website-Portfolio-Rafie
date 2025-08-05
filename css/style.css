@@ -1,17 +1,56 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
-    padding-top: 56px; /* Height of the navbar */
+    padding-top: 56px;
 }
 
-/* --- Hero Section --- */
+body, a, button {
+    cursor: none;
+}
+
+input, textarea {
+    cursor: text;
+}
+
+.cursor-dot,
+.cursor-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #0d6efd;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0d6efd;
+}
+
+.cursor-outline.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.cursor-dot.hover {
+    opacity: 0;
+}
+
 .hero-section {
-    position: relative; /* Ini penting untuk menumpuk partikel di belakang */
+    position: relative;
     height: 100vh;
     color: white;
-    overflow: hidden; /* Mencegah scroll bar jika partikel keluar batas */
+    overflow: hidden;
 }
 
 #home .particles-js-canvas-el {
@@ -21,7 +60,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: #212529; /* Warna latar belakang abu-abu gelap */
+    background-color: #212529;
 }
 
 .profile-img {
@@ -31,12 +70,12 @@ body {
     border: 3px solid #fff;
 }
 
-/* --- Timeline for Experience --- */
 .timeline {
     position: relative;
     padding: 0;
     list-style: none;
 }
+
 .timeline:before {
     content: '';
     position: absolute;
@@ -47,15 +86,18 @@ body {
     left: 50%;
     margin-left: -2px;
 }
+
 .timeline-item {
     margin-bottom: 40px;
     position: relative;
 }
+
 .timeline-item:after {
     content: "";
     display: table;
     clear: both;
 }
+
 .timeline-content {
     position: relative;
     width: 45%;
@@ -64,18 +106,20 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 .timeline-item:nth-child(odd) .timeline-content {
     float: left;
     text-align: right;
 }
+
 .timeline-item:nth-child(even) .timeline-content {
     float: right;
 }
+
 .timeline-content h5 {
     color: #0d6efd;
 }
 
-/* Responsive Timeline */
 @media (max-width: 768px) {
     .timeline:before {
         left: 30px;
@@ -90,11 +134,10 @@ body {
     }
 }
 
-
-/* --- Project Card Hover Effect --- */
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -107,16 +150,14 @@ body {
 }
 
 #project-filters .btn.active {
-    background-color: #0d6efd; /* Warna biru primer Bootstrap */
+    background-color: #0d6efd;
     border-color: #0d6efd;
-    color: #fff; /* Teks putih agar kontras */
+    color: #fff;
 }
 
-/* Tambahkan aturan baru ini */
 .project-item.hide {
     transform: scale(0.9);
     opacity: 0;
-    /* Kita gunakan display: none setelah animasi selesai */
     transition: transform 0.4s ease, opacity 0.4s ease, width 0.4s 0.4s, height 0.4s 0.4s, margin 0.4s 0.4s, padding 0.4s 0.4s;
     width: 0;
     height: 0;
@@ -125,27 +166,24 @@ body {
     overflow: hidden;
 }
 
-/* Mengubah kembali saat item ditampilkan */
 .project-item.show {
-    display: block; /* Pastikan item terlihat */
+    display: block;
 }
 
-/* --- Skills Icons --- */
 #skills i {
     font-size: 1.5rem;
     color: #0d6efd;
     margin: 0 5px;
 }
 
-/* --- Contact Icons --- */
 .social-icons a {
     transition: color 0.3s ease;
 }
+
 .social-icons a:hover {
     color: #0d6efd !important;
 }
 
-/* --- Animation on Scroll --- */
 section {
     opacity: 0;
     transform: translateY(20px);
@@ -162,18 +200,18 @@ section.visible {
 }
 
 .navbar.scrolled {
-    background-color: rgba(33, 37, 41, 0.9) !important; /* A slightly transparent dark */
+    background-color: rgba(33, 37, 41, 0.9) !important; 
     backdrop-filter: blur(5px);
 }
 
 .experience-logo {
-    width: 70px;          /* Atur lebar logo */
-    height: 70px;         /* Atur tinggi logo */
-    border-radius: 50%;   /* Membuat gambar menjadi lingkaran */
-    object-fit: cover;    /* Memastikan gambar tidak gepeng */
-    border: 2px solid #fff; /* Memberi bingkai putih tipis */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Memberi bayangan halus */
-    flex-shrink: 0;       /* Mencegah gambar menyusut jika teks panjang */
+    width: 70px;          
+    height: 70px;         
+    border-radius: 50%;   
+    object-fit: cover;    
+    border: 2px solid #fff; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    flex-shrink: 0;       
 }
 
 .documentation-title {
@@ -201,24 +239,24 @@ section.visible {
 }
 
 .documentation-thumbnails img:hover {
-    transform: scale(1.05); /* Sedikit membesar saat disentuh mouse */
+    transform: scale(1.05); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .tech-logos {
-    display: flex; /* Membuat logo berjajar rapi */
+    display: flex; 
     align-items: center;
-    gap: 15px; /* Memberi jarak antar logo */
+    gap: 15px; 
 }
 
 .tech-logos img {
-    height: 30px; /* Atur tinggi yang konsisten untuk semua logo */
-    width: auto;  /* Biarkan lebar menyesuaikan secara proporsional */
+    height: 30px; 
+    width: auto; 
     transition: transform 0.2s ease;
 }
 
 .tech-logos img:hover {
-    transform: scale(1.15); /* Efek hover tetap bisa digunakan */
+    transform: scale(1.15); 
 }
 
 .skill-category {
@@ -228,19 +266,25 @@ section.visible {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     height: 100%;
     border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); 
 }
 
 .skill-category h5 {
-    color: #0d6efd; /* Warna biru primer Bootstrap */
+    color: #0d6efd; 
     font-weight: 600;
     border-bottom: 2px solid #e9ecef;
     padding-bottom: 10px;
 }
 
 .skill-logo {
-    height: 30px; /* Ukuran tinggi yang konsisten untuk semua logo */
-    width: 30px;  /* Ukuran lebar yang konsisten */
-    object-fit: contain; /* Memastikan logo tidak terpotong */
+    height: 30px; 
+    width: 30px; 
+    object-fit: contain;
 }
 
 .skill-list li {
@@ -249,7 +293,7 @@ section.visible {
 }
 
 .skill-list li:hover {
-    background-color: #f8f9fa; /* Memberi efek hover pada setiap baris skill */
+    background-color: #f8f9fa; 
 }
 
 .skill-list span {
@@ -257,9 +301,8 @@ section.visible {
     color: #343a40;
 }
 
-/* --- Scroll to Top Button --- */
 #scrollTopBtn {
-    display: none; /* Sembunyikan secara default */
+    display: none; 
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -283,13 +326,12 @@ section.visible {
     background-color: #0b5ed7;
 }
 
-/* --- Footer --- */
 footer {
-    background-color: #343a40; /* Abu-abu gelap Bootstrap */
-    color: #f8f9fa; /* Teks putih */
+    background-color: #343a40;
+    color: #f8f9fa;
     text-align: center;
     padding: 15px 0;
-    position: relative; /* Untuk konteks posisi button scroll-to-top */
+    position: relative;
 }
 
 footer p {
