@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details: Mangosteen Detection - Rafie Rojagat Bachri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <main class="project-detail-page py-5 mt-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1>Mangosteen Maturity Detection App</h1>
+                <p class="lead text-muted">A desktop application applying image processing to aid the agricultural industry.</p>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <img src="assets/images/project-mangosteen-detector.png" class="img-fluid rounded shadow-lg" alt="Mangosteen App Showcase" loading="lazy">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Project Background</h3>
+                        <p>Manually sorting fruit by maturity is a time-consuming and subjective process in the agricultural sector. This project aimed to automate the detection of mangosteen maturity by analyzing the fruit's skin color, providing a more accurate and efficient method for quality control.</p>
+                    </section>
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Technology Stack</h3>
+                        <div class="tech-logos">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" title="Python" alt="Python Logo" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" title="OpenCV" alt="OpenCV Logo" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" title="Visual Studio Code" alt="VS Code Logo" />
+                        </div>
+                    </section>
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Challenges & Solutions</h3>
+                        <p>The main technical challenge was accurately distinguishing between ripe and unripe fruit under varying lighting conditions. Simple RGB color analysis was unreliable.
+                        <br><br><strong>Solution:</strong> I implemented image processing using the HSV (Hue, Saturation, Value) color space, which is less sensitive to lighting changes. By applying thresholding techniques on the Hue channel, I could isolate the specific color range of ripe mangosteens. I then used morphological operations in OpenCV, such as erosion and dilation, to remove noise and produce a clean binary mask, clearly distinguishing between mature and immature fruits.</p>
+                    </section>
+                    <div class="text-center mt-5">
+                        <a href="index.html#projects" class="btn btn-outline-secondary"><i class="fas fa-arrow-left me-2"></i>Back to All Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Rafie Rojagat Bachri. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
