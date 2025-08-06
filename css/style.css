@@ -5,47 +5,6 @@ body {
     padding-top: 56px;
 }
 
-body, a, button {
-    cursor: none;
-}
-
-input, textarea {
-    cursor: text;
-}
-
-.cursor-dot,
-.cursor-outline {
-    pointer-events: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9999;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #0d6efd;
-}
-
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #0d6efd;
-}
-
-.cursor-outline.hover {
-    transform: translate(-50%, -50%) scale(1.5);
-}
-
-.cursor-dot.hover {
-    opacity: 0;
-}
-
 .hero-section {
     position: relative;
     height: 100vh;
@@ -337,4 +296,31 @@ footer {
 footer p {
     margin-bottom: 0;
     font-size: 0.9rem;
+}
+
+.project-detail-page h1 {
+    font-weight: 700;
+}
+
+.project-detail-page h3 {
+    font-weight: 600;
+    color: var(--bs-primary);
+}
+
+.project-detail-page section ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.project-detail-page section ul li {
+    margin-bottom: 10px;
+}
+
+.project-gallery-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }

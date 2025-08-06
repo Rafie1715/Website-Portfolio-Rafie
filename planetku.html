@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details: Planetku - Rafie Rojagat Bachri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main class="project-detail-page py-5 mt-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1>Planetku (Smart Waste Management App)</h1>
+                <p class="lead text-muted">A capstone project for the Bangkit Academy 2024 program.</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <a href="assets/images/Planetku1.png" class="glightbox">
+                        <img src="assets/images/Planetku1.png"
+                            class="img-fluid rounded shadow-sm project-gallery-img" alt="CinemaZone Home Screen"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="assets/images/Planetku2.png" class="glightbox">
+                        <img src="assets/images/Planetku2.png"
+                            class="img-fluid rounded shadow-sm project-gallery-img" alt="CinemaZone Home Screen"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="assets/images/Planetku3.png" class="glightbox">
+                        <img src="assets/images/Planetku3.png"
+                            class="img-fluid rounded shadow-sm project-gallery-img" alt="CinemaZone Booking Screen"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="assets/images/Planetku4.png" class="glightbox">
+                        <img src="assets/images/Planetku4.png"
+                            class="img-fluid rounded shadow-sm project-gallery-img" alt="CinemaZone Booking Screen"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="assets/images/Planetku5.png" class="glightbox">
+                        <img src="assets/images/Planetku5.png"
+                            class="img-fluid rounded shadow-sm project-gallery-img" alt="CinemaZone Booking Screen"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="assets/images/Planetku6.png" class="glightbox">
+                        <img src="assets/images/Planetku6.png"
+                            class="img-fluid rounded shadow-sm project-gallery-img" alt="CinemaZone Booking Screen"
+                            loading="lazy">
+                    </a>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Project Background</h3>
+                        <p>Waste management is a significant challenge in many urban areas. The goal of Planetku was to create a mobile application that empowers users to manage their waste more effectively and sustainably. The app aims to solve problems like incorrect waste sorting, lack of awareness about recycling value, and difficulty in finding nearby waste banks.</p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">My Role & Responsibilities</h3>
+                        <ul>
+                            <li>Developing the core features of the Android application using Kotlin.</li>
+                            <li>Implementing the user interface based on the UI/UX design from the design team.</li>
+                            <li>Integrating the mobile app with Firebase for user authentication and real-time database functionalities.</li>
+                            <li>Connecting the app to a back-end API developed by the cloud computing team for features like price prediction.</li>
+                            <li>Collaborating with the Machine Learning team to implement the smart waste classification feature using the device's camera.</li>
+                        </ul>
+                    </section>
+
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Technology Stack</h3>
+                        <div class="tech-logos">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" title="Kotlin" alt="Kotlin Logo" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" title="Android Studio" alt="Android Studio Logo" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" title="Firebase" alt="Firebase Logo" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" title="Node.js" alt="Node.js Logo" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" title="TensorFlow" alt="TensorFlow Logo" />
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Challenges & Solutions</h3>
+                        <p>One of the biggest challenges was implementing the camera-based waste classification feature efficiently without slowing down the user's device. The initial model was quite large and slow. <br><br><strong>Solution:</strong> We worked closely with the Machine Learning team to optimize the TensorFlow Lite model for mobile deployment. On the app side, I implemented asynchronous processing (`Coroutines` in Kotlin) to ensure the UI remained responsive while the image was being analyzed in the background, providing a much smoother user experience.</p>
+                    </section>
+                    
+                    <div class="text-center mt-5">
+                        <a href="index.html#projects" class="btn btn-outline-secondary"><i class="fas fa-arrow-left me-2"></i>Back to All Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Rafie Rojagat Bachri. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
